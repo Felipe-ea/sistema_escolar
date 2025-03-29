@@ -10,7 +10,7 @@
 
 <?php 
 
-    include 'login.php';
+    include 'views/login.php';
 
 ?>  
     

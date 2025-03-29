@@ -1,5 +1,8 @@
 <?php
-require_once 'carregaTela.php';
+session_start();
+
+require_once 'controller/carregaTela.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +20,7 @@ require_once 'carregaTela.php';
         <h2 class="text-2xl font-bold mb-4">Sistema Escolar</h2>
         
         <nav class="flex-grow">
-            <form method="POST" class="space-y-2">
+            <form  method="POST" class="space-y-2">
                 <button name="bemVindo" value="bemVindo.php" type="submit" class="block w-full text-left p-2 rounded hover:bg-blue-600">Início</button>
                 <button name="cadastrarAluno" value="cadastrarAluno.php" type="submit" class="block w-full text-left p-2 rounded hover:bg-blue-600">Cadastrar Aluno</button>
                 <button name="atribuirNota" value="atribuirNota.php" type="submit" class="block w-full text-left p-2 rounded hover:bg-blue-600">Atribuir Nota</button>
@@ -25,8 +28,13 @@ require_once 'carregaTela.php';
             </form>
         </nav>
 
+        
+
         <!-- Botão Sair fixo no final -->
-        <button class="mt-auto bg-red-500 p-2 rounded hover:bg-red-600 w-full">Sair</button>
+        
+        <a href="controller/logout.php" class="text-center mt-auto bg-red-500 p-2 rounded hover:bg-red-600 w-full">Sair</a>
+        
+        
     </aside>
 
     <!-- Conteúdo Principal -->
