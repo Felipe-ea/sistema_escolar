@@ -14,5 +14,9 @@ if(isset($_POST['visualizarNota'])) {
     $tela_em_exibicao = $_POST['visualizarNota'];
 }
 
+if(isset($_POST['bemVindo'])) {
+    $tela_em_exibicao = $_POST['bemVindo'];
+}
+
 
 ?>
