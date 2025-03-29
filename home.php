@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+require_once 'verificaAutenticacao.php';
 require_once 'controller/carregaTela.php';
 
 ?>
