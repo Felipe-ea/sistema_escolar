@@ -1,6 +1,6 @@
 <main class="flex-1 p-6">
-    <div class="bg-gray-100 p-6">
-        <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
+    <div class="bg-gray-100 p-4">
+        <div class="max-w-4xl mx-auto bg-white p-4 rounded-lg shadow-md">
             <h2 class="text-2xl font-bold text-gray-700 text-center">Gerenciar Alunos</h2>
             
             <!-- Formulário de Cadastro/Atualização -->
@@ -14,7 +14,7 @@
 
                 <label class="block">
                     <span class="text-gray-700">Data de Nascimento</span>
-                    <input type="text" name="nome" id="nome" class="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-500" required>
+                    <input type="date" name="data_nascimento" class="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-500" required>
                 </label>
                 
                 <label class="block mt-3">

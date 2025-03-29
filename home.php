@@ -1,7 +1,9 @@
 <?php
-session_start();
-require_once 'verificaAutenticacao.php';
-require_once 'controller/carregaTela.php';
+
+    session_start();
+
+    require_once 'controller/verificaAutenticacao.php';
+    require_once 'controller/carregaTela.php';
 
 ?>
 
@@ -21,10 +23,21 @@ require_once 'controller/carregaTela.php';
         
         <nav class="flex-grow">
             <form  method="POST" class="space-y-2">
-                <button name="bemVindo" value="bemVindo.php" type="submit" class="block w-full text-left p-2 rounded hover:bg-blue-600">Início</button>
+                <!--
+                <button name="inicio" value="inicio.php" type="submit" class="block w-full text-left p-2 rounded hover:bg-blue-600">Início</button>
+                <button name="cadastrarProfessor" value="cadastrarProfessor.php" type="submit" class="block w-full text-left p-2 rounded hover:bg-blue-600">Cadastrar Professor</button>
                 <button name="cadastrarAluno" value="cadastrarAluno.php" type="submit" class="block w-full text-left p-2 rounded hover:bg-blue-600">Cadastrar Aluno</button>
                 <button name="atribuirNota" value="atribuirNota.php" type="submit" class="block w-full text-left p-2 rounded hover:bg-blue-600">Atribuir Nota</button>
                 <button name="visualizarNota" value="visualizarNota.php" type="submit" class="block w-full text-left p-2 rounded hover:bg-blue-600">Minhas Notas</button>
+                -->
+
+                <?php
+
+                include 'controller/verificaGrupoUsuario.php'
+                
+                ?>
+
+
             </form>
         </nav>
 
@@ -43,7 +56,7 @@ require_once 'controller/carregaTela.php';
         if ($tela_em_exibicao != null) {
             include 'views/' . $tela_em_exibicao;
         } else {
-            include 'views/bemVindo.php';
+            include 'views/inicio.php';
         }
         ?>
     </main>
