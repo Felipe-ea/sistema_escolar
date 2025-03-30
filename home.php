@@ -4,6 +4,7 @@
 
     require_once 'controller/verificaAutenticacao.php';
     require_once 'controller/carregaTela.php';
+    //require_once 'controller/cadastrarProfessor.php';
 
 ?>
 
