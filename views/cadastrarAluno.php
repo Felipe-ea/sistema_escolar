@@ -43,13 +43,15 @@
 
                         $sql_consulta = "SELECT * FROM aluno";
                         $sql_query = $mysqli->query($sql_consulta) or die("Falha na consulta: " . $mysqli->error);
-                    
+
+                        $consulta_realizada[] = null;
+
                         for($i = 0; $i < $sql_query->num_rows; $i++) {
                             $consulta_realizada[$i] = $sql_query->fetch_assoc();
                         }
                         
                         foreach($consulta_realizada as $consulta) {                        
-
+                            if( !empty($consulta) ) {
                         ?>
                         
                         <tr>
@@ -65,7 +67,7 @@
                             </td>
                         </tr>
 
-                        <?php } ?>
+                        <?php }} ?>
 
                     </tbody>
                 </table>

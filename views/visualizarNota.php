@@ -11,19 +11,42 @@
                         <th class="p-2 border">Nota</th>
                     </tr>
                 </thead>
+
+                <?php
+                        
+                        include 'conexao.php';
+
+                        if(isset($_SESSION['usuario_logado'])) {
+
+                            $usuarioLogado = $_SESSION['usuario_logado'];
+
+                            $sql_consulta = "SELECT * FROM notas WHERE usuario_aluno = '$usuarioLogado'";
+                            $sql_query = $mysqli->query($sql_consulta) or die("Falha na consulta: " . $mysqli->error);
+
+                            $consulta_realizada[] = null;
+
+                            for($i = 0; $i < $sql_query->num_rows; $i++) {
+                                $consulta_realizada[$i] = $sql_query->fetch_assoc();
+                            }
+                            
+                            foreach($consulta_realizada as $consulta) {
+
+                                if (!empty($usuarioLogado)) {
+
+
+                                
+                            
+                        
+                        
+
+                        ?>
                 <tbody>
                     <tr>
-                        <td class="p-2 border">Matemática</td>
-                        <td class="p-2 border text-center">8.5</td>
+                        <td class="p-2 border"><?= $consulta['disciplina'] ?></td>
+                        <td class="p-2 border text-center"><?= $consulta['nota'] ?></td>
                     </tr>
-                    <tr>
-                        <td class="p-2 border">Português</td>
-                        <td class="p-2 border text-center">7.0</td>
-                    </tr>
-                    <tr>
-                        <td class="p-2 border">História</td>
-                        <td class="p-2 border text-center">9.0</td>
-                    </tr>
+
+                    <?php }}} ?>
                 </tbody>
             </table>
         </div>
