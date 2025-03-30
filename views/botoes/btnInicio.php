@@ -1,0 +1,1 @@
+<button name="inicio" value="inicio.php" type="submit" class="block w-full text-left p-2 rounded hover:bg-blue-600">Início</button>
