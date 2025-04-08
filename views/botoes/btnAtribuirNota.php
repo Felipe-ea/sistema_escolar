@@ -1,1 +1,6 @@
-<button name="atribuirNota" value="atribuirNota.php" type="submit" class="block w-full text-left p-2 rounded hover:bg-blue-600">Atribuir Nota</button>
+<li>   
+    <button class="buttonstyle" name="atribuirNota" value="atribuirNota.php" type="submit">
+        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+        <span class="title" >Atribuir Nota</span>
+    </button> 
+</li>

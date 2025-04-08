@@ -1,1 +1,6 @@
-<button name="inicio" value="inicio.php" type="submit" class="block w-full text-left p-2 rounded hover:bg-blue-600">Início</button>
+<li>
+    <button class="buttonstyle" name="inicio" value="inicio.php" type="submit"> 
+        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+        <span class="title">Início</span>
+    </button>
+</li>
