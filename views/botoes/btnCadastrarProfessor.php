@@ -1,1 +1,6 @@
-<button name="cadastrarProfessor" value="cadastrarProfessor.php" type="submit" class="block w-full text-left p-2 rounded hover:bg-blue-600">Cadastrar Professor</button>
+<li>   
+    <button class="buttonstyle" name="cadastrarProfessor" value="cadastrarProfessor.php" type="submit">
+        <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
+        <span class="title" >Cadastrar Professor</span>
+    </button>
+</li>
